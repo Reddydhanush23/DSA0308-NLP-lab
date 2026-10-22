@@ -1,0 +1,23 @@
+# Register Number: 192324299
+# Morphological Analysis using NLTK
+
+import nltk
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+stemmer = PorterStemmer()
+lemmatizer = WordNetLemmatizer()
+
+words = ["playing", "played", "plays", "studies", "running", "better"]
+
+print("Register Number: 192324299")
+print("\nMorphological Analysis")
+print("-" * 40)
+
+for word in words:
+    print("Word:", word)
+    print("Stem:", stemmer.stem(word))
+    print("Lemma:", lemmatizer.lemmatize(word, pos='v'))
+    print()
